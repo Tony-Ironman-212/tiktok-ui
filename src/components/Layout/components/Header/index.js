@@ -1,8 +1,5 @@
-// import state v.v... từ thư viện React
-import React, { useState } from 'react';
-
-// import thư viện classnames
-import classNames from 'classnames/bind';
+import React, { useState, useEffect } from 'react'; // import state v.v... từ thư viện React
+import classNames from 'classnames/bind'; // import thư viện classnames
 
 // import liên quan đến fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +7,8 @@ import {
   faCircleXmark,
   faSpinner,
   faMagnifyingGlass,
-} from '@fortawesome//free-solid-svg-icons';
+  faSignIn,
+} from '@fortawesome/free-solid-svg-icons';
 
 // import của thư viện tippy
 import Tippy from '@tippyjs/react/headless';
@@ -21,15 +19,18 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
 function Header() {
   const [searchResults, setSearchResults] = useState([]);
 
-  setTimeout(() => {
-    setSearchResults([]);
-  }, 0);
+  useEffect(() => {
+    setTimeout(() => {
+      setSearchResults([]);
+    }, 100);
+  }, []);
 
   return (
     <header className={cx('wrapper')}>
@@ -68,7 +69,10 @@ function Header() {
           </div>
         </Tippy>
 
-        <div className={cx('actions')}></div>
+        <div className={cx('actions')}>
+          <Button text>Upload</Button>
+          <Button primary>Log in</Button>
+        </div>
       </div>
     </header>
   );

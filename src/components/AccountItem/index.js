@@ -10,7 +10,7 @@ function AccountItem() {
     <div className={cx('wrapper')}>
       <img
         className={cx('avatar')}
-        src='https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/7333963233059373077~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=a72b2b12&x-expires=1755118800&x-signature=Ok0R78nk57cUOTPa%2BB7UJ5N%2Bn9I%3D&t=4d5b0474&ps=13740610&shp=30310797&shcp=c1333099&idc=my'
+        src='https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/475024smv/avatar-chibi-cute-tiktok-dep_103842396.jpg'
         alt='hoa'
       />
       <div className={cx('info')}>

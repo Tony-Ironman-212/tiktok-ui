@@ -1,4 +1,5 @@
 import styles from './Sidebar.module.scss';
+import Button from '~/components/Button';
 
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
